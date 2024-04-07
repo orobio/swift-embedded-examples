@@ -22,6 +22,22 @@ void interrupt(void) {
     while (1) {}
 }
 
+void posix_memalign(void) {
+    while (1) {}
+}
+
+void __stack_chk_fail(void) {
+    while (1) {}
+}
+
+void __stack_chk_guard(void) {
+    while (1) {}
+}
+
+void free(void *ptr) {
+    while (1) {}
+}
+
 __attribute((used)) __attribute((section("__VECTORS,__text")))
 void *vector_table[114] = {
     (void *)0x2000fffc, // initial SP
