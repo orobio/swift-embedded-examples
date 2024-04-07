@@ -37,6 +37,7 @@ enum STM32F746Board {
         setRegisterBit(baseAddress: GPIO.GPIOi_BaseAddress, offset: GPIO.Offsets.ODR, bit: 1, value: 0)
     }
     
+    @inline(never)
     static func delay(miliseconds: Int) {
         for _ in 0 ..< 10_000 * miliseconds {
             nop()
