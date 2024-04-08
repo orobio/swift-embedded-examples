@@ -12,7 +12,7 @@ BUILDROOT=$SRCROOT/.build
 TARGET=armv7em-none-none-eabi
 
 SWIFT_EXEC=swiftc
-SWIFT_FLAGS="-target $TARGET -Osize -import-bridging-header $SRCROOT/BridgingHeader.h -wmo -enable-experimental-feature Embedded -Xcc -D__APPLE__ -Xcc -D__MACH__ -Xcc -ffreestanding"
+SWIFT_FLAGS="-target $TARGET -Osize -import-bridging-header $SRCROOT/BridgingHeader.h -wmo -enable-experimental-feature Embedded -Xcc -D__APPLE__ -Xcc -D__MACH__ -Xcc -ffreestanding -Xfrontend -function-sections"
 
 CLANG_EXEC=clang
 CLANG_FLAGS="-target $TARGET -Oz"
