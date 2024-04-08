@@ -34,6 +34,7 @@ struct STM32F746Board {
         led.deassert()
     }
     
+    @inline(never)
     mutating func delay(miliseconds: Int) {
         for _ in 0 ..< 100_000 * miliseconds {
             nop()

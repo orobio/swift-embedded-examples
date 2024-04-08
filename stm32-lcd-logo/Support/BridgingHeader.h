@@ -21,7 +21,7 @@ static inline void volatile_store_uint32_t(volatile uint32_t * _Nonnull destinat
     *((volatile uint32_t * _Nonnull) destination) = value;
 }
 
-static inline void nop() {
+static inline __attribute((always_inline)) void nop() {
     asm volatile("nop");
 }
 
